@@ -4,7 +4,7 @@
 #include <string>
 #include <variant>
 #include <vector>
-
+#include "common/config.h"
 enum class ColumnType {
     INT,
     VARCHAR
@@ -34,4 +34,9 @@ struct Schema {
 
         return size;
     }
+};
+
+struct RID {
+    page_id_t page_id;
+    uint16_t slot_id;
 };
